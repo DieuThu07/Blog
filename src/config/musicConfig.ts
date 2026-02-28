@@ -8,7 +8,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 	// 2. Thanh điều hướng: Trong tệp cấu hình này, đặt 'showInNavbar' thành 'false'.
 
 	// Có hiển thị lối vào trình phát nhạc trên thanh điều hướng không
-	showInNavbar: true,
+	showInNavbar: false,
 
 	// Chế độ sử dụng: "meting" sử dụng Meting API, "local" sử dụng danh sách nhạc địa phương
 	mode: "meting",

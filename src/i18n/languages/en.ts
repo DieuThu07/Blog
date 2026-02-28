@@ -1,7 +1,7 @@
 import Key from "../i18nKey";
 import type { Translation } from "../translation";
 
-export const vi: Translation = {
+export const en: Translation = {
 	[Key.home]: "Trang chủ",
 	[Key.about]: "Giới thiệu",
 	[Key.archive]: "Lưu trữ",

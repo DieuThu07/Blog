@@ -1,52 +1,52 @@
 import type { MusicPlayerConfig } from "../types/config";
 
-// 音乐播放器配置
+// Cấu hình trình phát nhạc
 export const musicPlayerConfig: MusicPlayerConfig = {
-	// 禁用音乐播放器方法：
-	// 模板默认侧边栏和导航栏两个都显示
-	// 1. 侧边栏：在sidebarConfig.ts侧边栏配置把音乐组件enable设为false禁用即可
-	// 2. 导航栏：在本配置文件把showInNavbar设为false禁用即可
+	// Cách vô hiệu hóa trình phát nhạc:
+	// Mặc định giao diện hiển thị ở cả thanh bên (sidebar) và thanh điều hướng (navbar)
+	// 1. Thanh bên: Trong sidebarConfig.ts, đặt 'enable' của thành phần music thành 'false'.
+	// 2. Thanh điều hướng: Trong tệp cấu hình này, đặt 'showInNavbar' thành 'false'.
 
-	// 是否在导航栏显示音乐播放器入口
+	// Có hiển thị lối vào trình phát nhạc trên thanh điều hướng không
 	showInNavbar: true,
 
-	// 使用方式："meting" 使用 Meting API，"local" 使用本地音乐列表
+	// Chế độ sử dụng: "meting" sử dụng Meting API, "local" sử dụng danh sách nhạc địa phương
 	mode: "meting",
 
-	// 默认音量 (0-1)
+	// Âm lượng mặc định (0-1)
 	volume: 0.7,
 
-	// 播放模式：'list'=列表循环, 'one'=单曲循环, 'random'=随机播放
+	// Chế độ phát: 'list'=lặp lại danh sách, 'one'=lặp lại một bài, 'random'=phát ngẫu nhiên
 	playMode: "list",
 
-	// 是否显启用歌词
+	// Có bật hiển thị lời bài hát không
 	showLyrics: true,
 
-	// Meting API 配置
+	// Cấu hình Meting API
 	meting: {
-		// Meting API 地址
-		// 默认使用官方 API，也可以使用自定义 API
+		// Địa chỉ Meting API
+		// Mặc định sử dụng API chính thức, cũng có thể sử dụng API tùy chỉnh
 		api: "https://api.i-meto.com/meting/api?server=:server&type=:type&id=:id&r=:r",
-		// 音乐平台：netease=网易云音乐, tencent=QQ音乐, kugou=酷狗音乐, xiami=虾米音乐, baidu=百度音乐
+		// Nền tảng âm nhạc: netease=网易云 (NetEase), tencent=QQ音乐, kugou=酷狗, xiami=虾米, baidu=百度
 		server: "netease",
-		// 类型：song=单曲, playlist=歌单, album=专辑, search=搜索, artist=艺术家
+		// Loại: song=bài hát đơn, playlist=danh sách phát, album=album, search=tìm kiếm, artist=nghệ sĩ
 		type: "playlist",
-		// 歌单/专辑/单曲 ID 或搜索关键词
+		// ID danh sách/album/bài hát hoặc từ khóa tìm kiếm
 		id: "10046455237",
-		// 认证 token（可选）
+		// Token xác thực (tùy chọn)
 		auth: "",
-		// 备用 API 配置（当主 API 失败时使用）
+		// Cấu hình API dự phòng (sử dụng khi API chính thất bại)
 		fallbackApis: [
 			"https://api.injahow.cn/meting/?server=:server&type=:type&id=:id",
 			"https://api.moeyao.cn/meting/?server=:server&type=:type&id=:id",
 		],
 	},
 
-	// 本地音乐配置（当 mode 为 'local' 时使用）
-	// 1. 支持传入歌词文件的路径
-	// lrc: "/assets/music/lrc/使一颗心免于哀伤-哼唱.lrc",
-	// 2. 或者直接填入歌词字符串内容
-	// lrc: "[00:00.00]歌词内容...",
+	// Cấu hình nhạc địa phương (sử dụng khi mode là 'local')
+	// 1. Hỗ trợ truyền đường dẫn tệp lời bài hát (.lrc)
+	// lrc: "/assets/music/lrc/filename.lrc",
+	// 2. Hoặc điền trực tiếp nội dung chuỗi lời bài hát
+	// lrc: "[00:00.00]Nội dung lời bài hát...",
 	local: {
 		playlist: [
 			{

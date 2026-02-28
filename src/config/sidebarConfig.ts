@@ -1,220 +1,218 @@
 import type { SidebarLayoutConfig } from "../types/config";
 
 /**
- * 侧边栏布局配置
+ * Cấu hình bố cục thanh bên (Sidebar)
  */
 export const sidebarLayoutConfig: SidebarLayoutConfig = {
-	// 是否启用侧边栏功能
+	// Có bật chức năng thanh bên hay không
 	enable: true,
 
-	// 侧边栏位置：
-	// left: 仅显示左侧边栏
-	// right: 仅显示右侧边栏
-	// both: 双侧边栏，1280px以上同时显示左右，769-1279px根据tabletSidebar配置显示其中一侧
+	// Vị trí thanh bên:
+	// left: Chỉ hiển thị thanh bên trái
+	// right: Chỉ hiển thị thanh bên phải
+	// both: Hiển thị cả hai bên. Trên 1280px hiển thị cả hai, từ 769-1279px hiển thị một bên dựa theo tabletSidebar
 	position: "both",
 
-	// 平板端(769-1279px)显示哪侧侧边栏，仅position为both时生效
-	// left: 平板端显示左侧边栏
-	// right: 平板端显示右侧边栏
+	// Phía thanh bên hiển thị trên máy tính bảng (769-1279px), chỉ có hiệu lực khi position là "both"
+	// left: Hiển thị thanh bên trái trên máy tính bảng
+	// right: Hiển thị thanh bên phải trên máy tính bảng
 	tabletSidebar: "left",
 
-	// 使用单侧栏(position为left或right)时，是否在文章详情页显示双侧边栏
-	// 当position为left时开启此项，文章详情页将额外显示右侧边栏
-	// 当position为right时开启此项，文章详情页将额外显示左侧边栏
-	// 适用在只想用单侧栏，但在文章详情页想用对侧栏的目录等组件的场景
+	// Khi sử dụng một thanh bên (position là left hoặc right), có hiển thị cả hai bên ở trang chi tiết bài viết không
+	// Nếu position là left và bật mục này, trang chi tiết bài viết sẽ hiển thị thêm thanh bên phải
+	// Nếu position là right và bật mục này, trang chi tiết bài viết sẽ hiển thị thêm thanh bên trái
+	// Thích hợp cho kịch bản chỉ muốn dùng một bên ở trang chủ, nhưng muốn hiện thêm mục lục ở bên đối diện trong bài viết
 	showBothSidebarsOnPostPage: true,
 
-	// 左侧边栏组件配置列表
-	// 组件的渲染顺序完全取决于它们在配置数组中出现的顺序，但top的组件会优先于sticky位置的组件渲染
-	// type 组件类型
-	// enable 是否启用该组件
-	// position 组件位置：top固定顶部，sticky粘性定位(会跟随页面滚动)
-	// showOnPostPage 是否在文章详情页显示该组件
-	// showOnNonPostPage 是否在非文章详情页显示该组件（除文章详情页外都显示）
-	// configId 组件配置ID（目前仅广告组件使用），用于区分不同的广告配置
-	// responsive 响应式配置（部分组件可用，可用来设定部分组件需要的参数）
+	// Danh sách cấu hình các thành phần thanh bên trái
+	// Thứ tự hiển thị phụ thuộc hoàn toàn vào thứ tự trong mảng, nhưng các thành phần "top" sẽ được ưu tiên hiển thị trước các thành phần "sticky"
+	// type: Loại thành phần
+	// enable: Có bật thành phần này không
+	// position: Vị trí (top: cố định ở trên, sticky: dính theo khi cuộn trang)
+	// showOnPostPage: Có hiển thị trong trang chi tiết bài viết không
+	// showOnNonPostPage: Có hiển thị ở các trang khác không (ngoại trừ trang chi tiết bài viết)
+	// configId: ID cấu hình (hiện chỉ dùng cho quảng cáo) để phân biệt các thiết lập quảng cáo khác nhau
+	// responsive: Cấu hình phản hồi (dùng để thiết lập các thông số riêng cho một số thành phần)
 	leftComponents: [
 		{
-			// 组件类型：用户资料组件
+			// Loại: Hồ sơ người dùng
 			type: "profile",
-			// 是否启用该组件
+			// Bật thành phần
 			enable: true,
-			// 组件位置
+			// Vị trí
 			position: "top",
-			// 是否在文章详情页显示
+			// Hiển thị trong trang bài viết
 			showOnPostPage: true,
 		},
 		{
-			// 组件类型：公告组件
+			// Loại: Thông báo
 			type: "announcement",
-			// 是否启用该组件
+			// Bật thành phần
 			enable: true,
-			// 组件位置
+			// Vị trí
 			position: "top",
-			// 是否在文章详情页显示
+			// Hiển thị trong trang bài viết
 			showOnPostPage: true,
 		},
 		{
-			// 组件类型：音乐播放器
+			// Loại: Trình phát nhạc
 			type: "music",
-			// 是否启用该组件
-			enable: false,
-			// 组件位置
+			// Bật thành phần
+			enable: true,
+			// Vị trí
 			position: "sticky",
-			// 是否在文章详情页显示
-			showOnPostPage: false,
+			// Hiển thị trong trang bài viết
+			showOnPostPage: true,
 		},
 		{
-			// 组件类型：分类组件
+			// Loại: Danh mục
 			type: "categories",
-			// 是否启用该组件
+			// Bật thành phần
 			enable: true,
-			// 组件位置
+			// Vị trí
 			position: "sticky",
-			// 是否在文章详情页显示
+			// Hiển thị trong trang bài viết
 			showOnPostPage: true,
-			// 响应式配置
+			// Cấu hình phản hồi
 			responsive: {
-				// 折叠阈值：当分类数量超过>5个时自动折叠
+				// Ngưỡng thu gọn: Tự động thu gọn khi số lượng danh mục vượt quá 5
 				collapseThreshold: 5,
 			},
 		},
 		{
-			// 组件类型：标签组件
+			// Loại: Thẻ (Tags)
 			type: "tags",
-			// 是否启用该组件
+			// Bật thành phần
 			enable: true,
-			// 组件位置
+			// Vị trí
 			position: "sticky",
-			// 是否在文章详情页显示
+			// Hiển thị trong trang bài viết
 			showOnPostPage: true,
-			// 响应式配置
+			// Cấu hình phản hồi
 			responsive: {
-				// 折叠阈值：当标签数量超过>20个时自动折叠
+				// Ngưỡng thu gọn: Tự động thu gọn khi số lượng thẻ vượt quá 20
 				collapseThreshold: 20,
 			},
 		},
 		{
-			// 组件类型：广告栏组件 1
+			// Loại: Quảng cáo 1
 			type: "advertisement",
-			// 是否启用该组件
+			// Bật thành phần
 			enable: false,
-			// 组件位置
+			// Vị trí
 			position: "sticky",
-			// 是否在文章详情页显示
+			// Hiển thị trong trang bài viết
 			showOnPostPage: true,
-			// 配置ID：使用第一个广告配置
+			// Sử dụng cấu hình quảng cáo số 1
 			configId: "ad1",
 		},
 	],
 
-	// 右侧边栏组件配置列表
+	// Danh sách cấu hình các thành phần thanh bên phải
 	rightComponents: [
 		{
-			// 组件类型：站点统计组件
+			// Loại: Thống kê trang web
 			type: "stats",
-			// 是否启用该组件
+			// Bật thành phần
 			enable: true,
-			// 组件位置
+			// Vị trí
 			position: "top",
-			// 是否在文章详情页显示
+			// Hiển thị trong trang bài viết
 			showOnPostPage: true,
 		},
 		{
-			// 组件类型：日历组件
+			// Loại: Lịch
 			type: "calendar",
-			// 是否启用该组件
+			// Bật thành phần
 			enable: true,
-			// 组件位置
+			// Vị trí
 			position: "sticky",
-			// 是否在文章详情页显示
+			// Hiển thị trong trang bài viết
 			showOnPostPage: false,
 		},
 		{
-			// 组件类型：侧边栏目录组件（只在文章详情页显示）
+			// Loại: Mục lục thanh bên (Chỉ hiển thị trong trang chi tiết bài viết)
 			type: "sidebarToc",
-			// 是否启用该组件
+			// Bật thành phần
 			enable: true,
-			// 组件位置
+			// Vị trí
 			position: "sticky",
-			// 是否在文章详情页显示
+			// Hiển thị trong trang bài viết
 			showOnPostPage: true,
-			// 是否在非文章详情页显示
+			// Không hiển thị ở các trang ngoài bài viết
 			showOnNonPostPage: false,
 		},
 		{
-			// 组件类型：广告栏组件 2
+			// Loại: Quảng cáo 2
 			type: "advertisement",
-			// 是否启用该组件
+			// Bật thành phần
 			enable: false,
-			// 组件位置
+			// Vị trí
 			position: "sticky",
-			// 是否在文章详情页显示
+			// Hiển thị trong trang bài viết
 			showOnPostPage: true,
-			// 配置ID：使用第二个广告配置
+			// Sử dụng cấu hình quảng cáo số 2
 			configId: "ad2",
 		},
 	],
 
-	// 移动端底部组件配置列表
-	// 这些组件只在移动端(<768px)显示在页面底部，独立于左右侧边栏配置
+	// Danh sách thành phần dưới đáy trên di động
+	// Những thành phần này chỉ hiển thị ở cuối trang trên thiết bị di động (<768px), độc lập với cấu hình thanh bên trái/phải
 	mobileBottomComponents: [
 		{
-			// 组件类型：用户资料组件
+			// Loại: Hồ sơ người dùng
 			type: "profile",
-			// 是否启用该组件
+			// Bật thành phần
 			enable: true,
-			// 是否在文章详情页显示
+			// Hiển thị trong trang bài viết
 			showOnPostPage: true,
 		},
 		{
-			// 组件类型：公告组件
+			// Loại: Thông báo
 			type: "announcement",
-			// 是否启用该组件
+			// Bật thành phần
 			enable: true,
-			// 是否在文章详情页显示
+			// Hiển thị trong trang bài viết
 			showOnPostPage: true,
 		},
 		{
-			// 组件类型：音乐播放器
+			// Loại: Trình phát nhạc
 			type: "music",
-			// 是否启用该组件
+			// Bật thành phần
 			enable: true,
-			// 是否在文章详情页显示
-			showOnPostPage: false,
+			// Hiển thị trong trang bài viết
+			showOnPostPage: true,
 		},
 		{
-			// 组件类型：分类组件
+			// Loại: Danh mục
 			type: "categories",
-			// 是否启用该组件
+			// Bật thành phần
 			enable: true,
-			// 是否在文章详情页显示
+			// Hiển thị trong trang bài viết
 			showOnPostPage: true,
-			// 响应式配置
+			// Cấu hình phản hồi
 			responsive: {
-				// 折叠阈值：当分类数量超过5个时自动折叠
 				collapseThreshold: 5,
 			},
 		},
 		{
-			// 组件类型：标签组件
+			// Loại: Thẻ (Tags)
 			type: "tags",
-			// 是否启用该组件
+			// Bật thành phần
 			enable: true,
-			// 是否在文章详情页显示
+			// Hiển thị trong trang bài viết
 			showOnPostPage: true,
-			// 响应式配置
+			// Cấu hình phản hồi
 			responsive: {
-				// 折叠阈值：当标签数量超过20个时自动折叠
 				collapseThreshold: 20,
 			},
 		},
 		{
-			// 组件类型：站点统计组件
+			// Loại: Thống kê trang web
 			type: "stats",
-			// 是否启用该组件
+			// Bật thành phần
 			enable: true,
-			// 是否在文章详情页显示
+			// Hiển thị trong trang bài viết
 			showOnPostPage: true,
 		},
 	],

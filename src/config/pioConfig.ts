@@ -51,14 +51,14 @@ export const spineModelConfig: SpineModelConfig = {
 		],
 		// 点击时随机显示的文字消息
 		clickMessages: [
-			"你好呀！我是流萤~",
-			"今天也要加油哦！✨",
-			"想要一起去看星空吗？🌟",
-			"记得要好好休息呢~",
-			"有什么想对我说的吗？💫",
-			"让我们一起探索未知的世界吧！🚀",
-			"每一颗星星都有自己的故事~⭐",
-			"希望能带给你温暖和快乐！💖",
+			"Chào bạn nha! Mình là Dieu Thu~",
+			"Hôm nay cũng phải cố gắng lên nhé! ✨",
+			"Muốn cùng mình đi ngắm bầu trời đầy sao không? 🌟",
+			"Nhớ nghỉ ngơi cho thật tốt đó nha~",
+			"Có điều gì muốn nói với mình không? 💫",
+			"Hãy cùng nhau khám phá thế giới chưa biết nhé! 🚀",
+			"Mỗi vì sao đều có câu chuyện của riêng mình~ ⭐",
+			"Hy vọng có thể mang đến cho bạn sự ấm áp và niềm vui! 💖",
 		],
 		// 文字显示时间（毫秒）
 		messageDisplayTime: 3000,
@@ -71,7 +71,7 @@ export const spineModelConfig: SpineModelConfig = {
 	// 响应式配置
 	responsive: {
 		// 在移动端隐藏
-		hideOnMobile: true,
+		hideOnMobile: false,
 		// 移动端断点
 		mobileBreakpoint: 768,
 	},

@@ -1,17 +1,17 @@
 ---
-title: 在文章中嵌入视频
-published: 1970-01-01
-description: 这篇文章演示如何在博客文章中嵌入视频。
-tags: [示例, 视频, Firefly]
-category: 文章示例
+title: Nhúng video vào bài viết
+published: 2026-01-01
+description: Bài viết này minh họa cách nhúng video vào bài đăng blog.
+tags: [Ví dụ, Video, Thinhem]
+category: Bài viết mẫu
 draft: false
 ---
 
-只需从 YouTube 或其他平台复制嵌入代码，然后将其粘贴到 markdown 文件中。
+Chỉ cần sao chép mã nhúng (embed) từ YouTube hoặc các nền tảng khác, sau đó dán vào file markdown.
 
 ```yaml
 ---
-title: 在文章中嵌入视频
+title: bài viết demo
 published: 2023-10-19
 // ...
 ---

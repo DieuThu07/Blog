@@ -28,7 +28,7 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 
 	// 我的及其子菜单
 	links.push({
-		name: "我的",
+		name: "Trang",
 		url: "/my/",
 		icon: "material-symbols:person",
 		children: [
@@ -42,7 +42,7 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 
 	// 关于及其子菜单
 	links.push({
-		name: "关于",
+		name: "Giới thiệu",
 		url: "/content/",
 		icon: "material-symbols:info",
 		children: [
@@ -56,29 +56,23 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 
 	// 自定义导航栏链接,并且支持多级菜单
 	links.push({
-		name: "链接",
+		name: "Liên kết",
 		url: "/links/",
 		icon: "material-symbols:link",
 
 		// 子菜单
 		children: [
 			{
-				name: "GitHub",
-				url: "https://github.com/CuteLeaf/Firefly",
+				name: "Facebook",
+				url: "https://www.facebook.com/thinhem.ic",
 				external: true,
-				icon: "fa7-brands:github",
+				icon: "fa7-brands:facebook",
 			},
 			{
-				name: "Gitee",
-				url: "https://gitee.com/CuteLeaf/Firefly",
+				name: "Telegram",
+				url: "https://t.me/phungduythinh",
 				external: true,
-				icon: "fa7-brands:gitee",
-			},
-			{
-				name: "QQ交流群",
-				url: "https://qm.qq.com/q/ZGsFa8qX2G",
-				external: true,
-				icon: "fa7-brands:qq",
+				icon: "fa7-brands:telegram",
 			},
 		],
 	});

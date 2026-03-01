@@ -52,7 +52,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 			{
 				name: "VN/A Trap",
 				artist: "Betekar",
-				url: "https://audio.jukehost.co.uk/UuxgDcRjEmoZEmJPvgb93d5XjBecLx2G",
+				url: "https://audio.jukehost.co.uk/7osFCM8Xs2FCXRtgryn0tGA6nBggJDwY",
 				cover: "https://img.inlove.eu.org/v2/kZdffc6.jpeg",
 				lrc: "/assets/music/lyrics/vnatrap.lrc",
 			},

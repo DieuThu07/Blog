@@ -16,7 +16,7 @@ export const fontConfig = {
 		// 系统字体
 		system: {
 			id: "system",
-			name: "系统字体",
+			name: "Phông chữ hệ thống",
 			src: "", // 系统字体无需 src
 			family:
 				"system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif",

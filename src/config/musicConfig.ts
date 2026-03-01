@@ -11,7 +11,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 	showInNavbar: false,
 
 	// Chế độ sử dụng: "meting" sử dụng Meting API, "local" sử dụng danh sách nhạc địa phương
-	mode: "meting",
+	mode: "local",
 
 	// Âm lượng mặc định (0-1)
 	volume: 0.7,
@@ -50,10 +50,17 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 	local: {
 		playlist: [
 			{
-				name: "使一颗心免于哀伤",
-				artist: "知更鸟 / HOYO-MiX / Chevy",
-				url: "/assets/music/使一颗心免于哀伤-哼唱.mp3",
-				cover: "/assets/music/cover/109951169585655912.webp",
+				name: "VN/A Trap",
+				artist: "Betekar",
+				url: "https://audio.jukehost.co.uk/UuxgDcRjEmoZEmJPvgb93d5XjBecLx2G",
+				cover: "https://img.inlove.eu.org/v2/kZdffc6.jpeg",
+				lrc: "/assets/music/lyrics/vnatrap.lrc",
+			},
+			{
+				name: "Em iu",
+				artist: "Bâu cứt, gỗ, nghiện",
+				url: "https://audio.jukehost.co.uk/3Y672q4ctH2VjK6XD9ACwuLwdBMd24WJ",
+				cover: "https://img.inlove.eu.org/v2/6eFsSRZ.jpeg",
 				lrc: "",
 			},
 		],
